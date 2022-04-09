@@ -3,96 +3,214 @@
 <head>
      <title>Mini-Challenge #1 - My Resume</title>
 
+     <meta name="description" content="Pierre Vincent C. Hernandez's Resume">
+     <meta name="author" content="Pierre Vincent C. Hernandez">
+
      <!-- You might find these useful :) -->
-     <style type="css">
-         .break { clear: both; }
-         dd.break { float: none; margin: 0; height: 15px; }
-     </style>
+     <!--
+         <style type="css">
+            .break { clear: both; }
+            dd.break { float: none; margin: 0; height: 15px; }
+         </style>
+     -->
 
      <!-- You may use inline or external CSS, or whichever method you are comfortable with-->
+     <link rel="stylesheet" type="text/css" media="all" href="css/styles.css">
 </head>
 
 <body>
 
-    <div>
+    <!-- Entire Page -->
+    <div id="entire-page">
         <!--- Use a different photo for this one -->
-        <img src="images/charlie_work.png" alt="Photo of Charlie" />
+        <img id="my-image" src="images/Pierre_1.jpg" alt="Photo of Pierre" />
     
         <div>
         
             <!--- Use your actual name -->
-            <h1>Charlie Caronongan</h1>
+            <h1 id="name-header">Pierre Vincent Hernandez</h1>
         
-            <p>
+            <p id="contact-info">
                 <!--- Use your actual dlsu email -->
-                Email: <a href="mailto:charlie.caronongan@dogs.com">charlie.caronongan@dogs.com</a><br>
-                Contact no.: 123-456-7890
+                Email: <a class="email-link" href="mailto:pierre_hernandez@dlsu.edu.ph">pierre_hernandez@dlsu.edu.ph</a><br>
+                Contact no.: 0939-249-0334
             </p>
         </div>
                 
-        <div>
+        <div id="objective">
             <p>
                 <!--- Write a summary about yourself -->
-                I am a Pembroke Welsh Corgi that is seeking a 
-                career that fits my professional skills, personality, and cute tendencies. 
-                My long ears can detect threats from afar and my short (but strong) legs allow me to run like the wind. 
-                I can bring joy to your working environment, provided that you give me an air-conditioned room
-                with lots of food. 
+                I'm Pierre Vincent C. Hernandez, a 2nd DLSU college student who
+                is currently taking BS Computer Science Major in Computer Systems Engineering.
+                I am seeking a career where I could utilize the current knowledge and skills that I have
+                in order to solver real-world problems that would benefit a lot of people.
+                I am always eager to learn a lot of new things in the vast world of computing in
+                order to continuously improve not only myself but also my craft. 
             </p>
         </div>
         
-        <div class="break"></div>
+         
+        <!--
+            <div class="break"></div>
+
+            Doesn't work unless it has a text content.
+            When inspected it is placed right before the objective
+            on the page. This is why the <dl> tag containing the
+            resume body extends way up the top of the objective div.
+            Thus, making the first <dt> tag which is the "Education"
+            is not on its expected place and is floating right below the image
+            but floating to the right since it senses that there is a floating
+            element on the left which is the objective.
+        -->
         
-        <dl>
+        <dl class="resume-body">
             <!--- Everything here should pertain about yourself-->
             <dd class="break"></dd>
             
             <!-- You are free to add more entries here-->
             <dt>Education</dt>
             <dd>
-                <h2>Corgi University - Queen Elizabeth's Academy 2018-2019</h2>
-                <p><strong>Major:</strong> Cattle Herding and Sheep Herding<br />
-                   <strong>Minor:</strong> Therapy and Emotional Support</p>
+                <h2>De La Salle University (DLSU) - Manila, Philippines<span class="date">2020 - Present</span></h2>
+                <p><strong>Major:</strong> Bachelor of Science in Computer Science Major in Computer Systems Engineering</p>
             </dd>
-                  
-            <!-- You are free to add more entries here-->
-            <dt>Skills</dt>
-            <dd>
-                <h2>Office skills</h2>
-                <p>Emotional Support Animal, Bringing Joy, Employee Management</p>
-                
-                <h2>Computer skills</h2>
-                <p>Pressing on the Keyboard, Basic Microsoft Productivity Tools (Word, Excel, Powerpoint), Programming that doesn't compile</p>
-            </dd>
-            
-            
+
+            <dd class="break"></dd>
+
             <!-- Feel free to add more entries here. You can put org work, high school work. If no experience, just make up some :)-->
             <dt>Experience</dt>
             <dd>
-                <h2>Cattle Herder Champion - Corgi County, Earth - 2019-2020</h2>
+                <h2>Project Head - Organizational<br />
+                    Application Development<span class="date">March 2022 - Present</span></h2>
                 <ul>
-                    <li>Champion Cattle Herder, able to herd cattle (obviously)</li>
-                    <li>Can also herd humans by biting on their ankles and nipping on their heels</li>
-                    <li>Destroyed furniture in the process, but it's worth it</li>
+                    <li class="comp-org">DLSU La Salle Computer Society (LSCS), Manila</li>
+                    <li>A termlong project where we create various websites and web applications 
+                        for the requesting committees within the organization.</li>
                 </ul>
                 
-                <h2>Therapy Dog Caronongan Household, Earth - 2020-Present</h2>
+                <h2>Research Assistant - TITAN Project<span class="date">January 2022 - Present</span></h2>
                 <ul>
-                    <li>Stress Reliever of the Caronongan Household</li>
-                    <li>Allows the household to pet me without getting angry (too much)</li>
-                    <li>Follows everyone around the house to make sure they're doing their chores</li>
+                    <li class="comp-org">DLSU Advanced Research Institute for Informatics, Computing and Networking (AdRIC), Manila</li>
+                    <li>A contractual work under Dr. Joel Ilao. I am responsible for manually counting objects detected in the 
+                        CCTV camera and provide datasets in order to further improve their project.</li>
                 </ul> 
 
+                <h2>Project Head - Student Development Goals<span class="date">January 2022 - Present</span></h2>
+                <ul>
+                    <li class="comp-org">DLSU College of Computer Studies Batch 24 (CATCH2T24)</li>
+                    <li>A termlong project where we raise the awareness of fellow Lasallians regarding renewable 
+                        and non-renewable energy in support of the Sustainable Development Goals.</li>
+                </ul>
+
+                <h2>Associate Vice President - Research and Development<span class="date">October 2021 - Present</span></h2>
+                <ul>
+                    <li class="comp-org">DLSU La Salle Computer Society (LSCS), Manila</li>
+                    <li>Helping in shaping future officers of the organization while also providing 
+                        research and development support for the organization.</li>
+                </ul>
+
+                <h2>Associate Vice President - Finance<span class="date">October 2021 - Present</span></h2>
+                <ul>
+                    <li class="comp-org">DLSU Society of Proactive Role Models INspiring Total Development (SPRINT), Manila</li>
+                    <li>Helping in shaping future officers of the organization while also overseeing 
+                        the financial processes within the organization.</li>
+                </ul>
+
+                <h2>Executive - Research and Development<span class="date">October 2021 - Present</span></h2>
+                <ul>
+                    <li class="comp-org">DLSU College of Computer Studies Batch 24 (CATCH2T24)</li>
+                    <li>Providing research and development support for the batch government.</li>
+                </ul>
+
+                <h2>Undergraduate Intern - Bioinformatics<span class="date">October 2021 - Present</span></h2>
+                <ul>
+                    <li class="comp-org">DLSU Bioinformatics Group, Manila</li>
+                    <li>Helping in debugging the project code and creating a unit test for the research project.</li>
+                </ul>
+
+                <h2>Operations Lead - TTS<span class="date">October 2021 - Present</span></h2>
+                <ul>
+                    <li class="comp-org">Tatak Tech Solutions, Cavite</li>
+                    <li>Responsible for communicating with clients, and leading and overseeing projects.</li>
+                </ul>
+
+                <h2>Scriptwriter<span class="date">July 2021 - Present</span></h2>
+                <ul>
+                    <li class="comp-org">DLSU La Salle Dance Company - Folk, Manila</li>
+                    <li>Writing scripts for concerts and other events of the company.</li>
+                </ul>
+
+            </dd>
+
+            <dd class="break"></dd>
+
+            <!-- You are free to add more entries here-->
+            <dt>Skills</dt>
+            <dd>
+                <h2>Soft skills</h2>
+                <ul>
+                    <li>Leadership</li>
+                    <li>Collaboration</li>
+                    <li>Project Management</li>
+                    <li>Communication</li>
+                    <li>Public Speaking</li>
+                    <li>Problem Solving</li>
+                    <li>Research</li>
+                </ul>
+                <h2>Computer and Programming skills</h2>
+                <ul>
+                    <li>Basic Microsoft Productivity Tools (Word, Excel, PowerPoint)</li>
+                    <li>C/C++</li>
+                    <li>Java</li>
+                    <li>Rust</li>
+                    <li>Go</li>
+                    <li>HTML, CSS</li>
+                    <li>Javascript</li>
+                    <li>Python</li>
+                    <li>Ruby</li>
+                    <li>MATLAB</li>
+                    <li>SQL, MySQL</li>
+                    <li>NoSQL, MongoDB</li>
+                    <li>Node.js</li>
+                    <li>Express.js</li>
+                    <li>Handlebars, EJS</li>
+                    <li>Git, GitHub, Bitbucket</li>
+                    <li>GNU Bash, WSL</li>
+                </ul>
             </dd>
             
+            <dd class="break"></dd>
+
             <!-- Add Hobbies and References afterwards :)-->
+
+            <!-- Hobbies and Interests -->
+            <dt>Hobbies and Interests</dt>
+            <dd>
+                <ul>
+                    <li>Programming</li>
+                    <li>Listening to music</li>
+                    <li>Playing guitar</li>
+                    <li>Linux</li>
+                    <li>Digital Signal Processing</li>
+                    <li>Math and Science</li>
+                    <li>Philosophy</li>
+                    <li>Stocks</li>
+                </ul>
+            </dd>
+
+            <dd class="break"></dd>
+
+            <!-- References -->
+            <dt>References</dt>
+            <dd>
+                <p>Available on Request</p>
+            </dd>
             
             <dd class="break"></dd>
         </dl>
         
         <div class="break"></div>
     
-    </div>
+    </div> <!-- END Entire Page -->
 
 </body>
 

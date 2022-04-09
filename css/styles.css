@@ -1,0 +1,124 @@
+* {
+    margin: 0px;
+    padding: 0px;
+}
+
+body {
+    line-height: 22px;
+    font: 17px Times;
+}
+
+/* Entire Page */
+#entire-page {
+    margin: 40px auto 60px;
+    width: 805px;
+}
+
+/* Image */
+#my-image {
+    height: 303px;
+    width: 293px;
+    float: right;
+    margin: -30px 0 0 0;
+    object-fit: cover;
+}
+
+/* Name header */
+#name-header {
+    margin: 0 0 17px 0;
+    padding: 0 0 17px 0;
+    font-size: 43px;
+    font-weight: bold;
+    letter-spacing: -3px;
+    border-bottom: 1px solid rgb(130, 129, 129);
+}
+
+/* Contact info */
+#contact-info {
+    margin: 0 0 16px 0;
+}
+
+/* Email link */
+.email-link {
+    color: rgb(115, 113, 113);
+    text-decoration: none;
+    border-bottom: 1px dotted #999;
+}
+
+/* Email mouse-over */
+.email-link:hover {
+    border-bottom-style: solid;
+    color: blue;
+}
+
+/* Objective */
+#objective {
+    width: 500px;
+    float: left;
+    font-family: Helvetica;
+    font-style: italic;
+    color: #666;
+}
+
+/*
+    Make sures that the contents of the resume body will not
+    move to the right because of the objective floating to the left.
+ */
+.resume-body {
+    clear: both;
+}
+
+/* Component */
+dt {
+    font-style: italic;
+    font-weight: bold;
+    font-size: 18px;
+    text-align: right;
+    padding: 0 26px 0 0;
+    width: 150px;
+    float: left;
+    height: 100px;
+    border-right: 1px solid rgb(115, 113, 113);
+}
+
+/* Description */
+dd {
+    display: flex;
+    flex-direction: column;
+    padding-left: 26px;
+}
+dd * {
+    margin: 0 0 6px 0;
+    position: relative;
+}
+dd h2 {
+    font-size: 20px;
+}
+
+.comp-org {
+    font-weight: bold;
+    font-style: italic;
+}
+
+.break {
+    clear: both;
+    height: 15px;
+}
+
+/* Date */
+.date {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    font-style: italic;
+    font: Arial;
+    font-size: 16px;
+    color: #998;
+    font-weight: normal;
+}
+
+/* Unordered list */
+ul {
+    margin: 0 0 32px 17px;
+}
+
