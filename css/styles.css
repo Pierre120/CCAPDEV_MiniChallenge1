@@ -95,11 +95,13 @@ dd h2 {
     font-size: 20px;
 }
 
+/* Style for company or organization name */
 .comp-org {
     font-weight: bold;
     font-style: italic;
 }
 
+/* Break for each section of the resume body */
 .break {
     clear: both;
     height: 15px;
